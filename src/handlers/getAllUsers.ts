@@ -1,14 +1,15 @@
-import client from "../db.ts";
+
+import {search } from '../repository/user.ts';
 
 
-// deno-lint-ignore no-explicit-any
-export async function getAllUsers(ctx: any) {
+
+
+export async function getAllUsers({response}: any) {
   try {
-    const users = await client.query("SELECT * FROM user");
-    console.log(users);
-    ctx.response.body = users;
-    const r = new Response();
-    r.body;
+    const users = await search();
+    //console.log(users);
+    response.body = users.rows;
+   
   } catch (error) {
     console.log(error);
   }
