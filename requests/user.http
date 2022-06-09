@@ -1,0 +1,17 @@
+### Obtaining users
+
+GET http://localhost:8000/users
+
+### Creating users
+POST http://localhost:8000/users
+Content-Type: application/json
+ 
+{
+    "id": 000,
+    "name": "Dummy",
+    "password": "ddd",
+    "mail": "d@g.co",
+    "city": "Narnia",
+    "age": 40,
+    "sex": 2
+}
