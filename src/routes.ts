@@ -11,8 +11,8 @@ const router = new Router();
 router
   .get("/users", getAllUsers)
   .get("/users/1", getUser)
-  .put("/users", addUser)
-  .put("/users", updateUser)
+  .post("/users", addUser)
+  .put("/u", updateUser)
   .delete("/users", deleteUser);
 
 export default router;
